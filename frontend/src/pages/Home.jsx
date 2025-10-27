@@ -44,7 +44,8 @@ export default function Home(){
           {coords && <p className="mt-2 text-xs text-slate-500">Location ready: {coords.lat.toFixed(5)}, {coords.lng.toFixed(5)}</p>}
         </div>
         <div className="card">
-          <img alt="hero" src="/hero.svg" className="rounded-xl"/>
+        <img src="/hero.svg" alt="hero" className="rounded-xl" style={{ maxWidth:'100%', height:'auto', borderRadius:12 }} />
+
         </div>
       </section>
 
