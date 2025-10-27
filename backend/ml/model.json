@@ -1,0 +1,9 @@
+{
+  "base": 0.15,
+  "overflow": 0.55,
+  "illegal_dump": 0.75,
+  "stagnant_water": 0.65,
+  "e_waste": 0.45,
+  "other": 0.25,
+  "nightBoost": 0.12
+}

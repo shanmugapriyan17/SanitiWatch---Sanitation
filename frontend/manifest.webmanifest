@@ -1,0 +1,9 @@
+{
+  "name": "SanitiWatch",
+  "short_name": "SanitiWatch",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "icons": []
+}

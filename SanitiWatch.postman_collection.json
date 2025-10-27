@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "SanitiWatch API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{base}}/api/health"
+      }
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "url": "{{base}}/api/auth/register",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"A\", \"email\": \"a@a.com\", \"password\": \"password123\"}"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "{{base}}/api/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"admin@city.gov\", \"password\": \"admin123\"}"
+        }
+      }
+    },
+    {
+      "name": "Create Report",
+      "request": {
+        "method": "POST",
+        "url": "{{base}}/api/reports",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"description\": \"bin overflow\", \"category\": \"overflow\", \"location\": {\"lat\": 12.9, \"lng\": 77.6}}"
+        }
+      }
+    },
+    {
+      "name": "List Reports",
+      "request": {
+        "method": "GET",
+        "url": "{{base}}/api/reports",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost:4000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}
