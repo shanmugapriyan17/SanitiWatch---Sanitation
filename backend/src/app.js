@@ -22,6 +22,15 @@ app.use(morgan('dev'));
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+app.use(cors({
+  origin: [
+    "https://saniti-watch-sanitation.vercel.app",
+    "http://localhost:5173"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use('/api', rateLimiter);
 app.use('/api/auth', authRoutes);
 app.use('/api/reports', reportRoutes);
