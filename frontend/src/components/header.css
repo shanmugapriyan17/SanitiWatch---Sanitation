@@ -1,8 +1,0 @@
-.sw-header { position:sticky; top:0; background:#fff; z-index:1000; border-bottom:1px solid #ddd; }
-.sw-header-inner { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; }
-.desktop-nav { display:flex; gap:1rem; }
-.hamburger { display:none; flex-direction:column; gap:4px; cursor:pointer; border:none; background:none; }
-.dash { width:20px; height:2px; background:#111; }
-.mobile-panel { display:none; flex-direction:column; gap:10px; position:absolute; top:60px; right:10px; background:white; padding:10px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-.mobile-panel.open { display:flex; }
-@media(max-width:768px){ .desktop-nav{display:none;} .hamburger{display:flex;} }
